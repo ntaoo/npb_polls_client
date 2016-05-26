@@ -1,0 +1,11 @@
+<div *ngFor="let standingsPoll of standingsPolls" class="standings-poll mdl-shadow--6dp">
+  <div class="league-name">{{standingsPoll.league.name}}</div>
+  <div class="standing-poll" *ngFor="let standingPoll of standingsPoll">
+    <doughnut-chart
+        height="150"
+        width="150"
+        [standingPoll]="standingPoll"></doughnut-chart>
+    <standing-votes
+        [standingPoll]="standingPoll"></standing-votes>
+  </div>
+</div>

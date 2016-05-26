@@ -1,0 +1,23 @@
+@import './../../shared/animation';
+
+.select-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+select {
+  width: 100%;
+  border-style: none;
+  font-size: 20px;
+  option {
+    //height: 100px;
+  }
+}
+
+.clear-button-container {
+  width: 30px;
+  .clear-button {
+    cursor: pointer;
+  }
+}

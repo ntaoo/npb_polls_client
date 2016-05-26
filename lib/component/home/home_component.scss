@@ -1,0 +1,11 @@
+@import './../shared/animation';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+sign-in {
+  margin: 10px auto;
+}

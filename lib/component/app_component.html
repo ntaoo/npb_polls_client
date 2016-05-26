@@ -1,0 +1,24 @@
+<div class="mdl-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+    <div class="mdl-layout__header-row portfolio-logo-row">
+      <span class="mdl-layout__title">
+          <a href="https://www.github.com/ntaoo/npb_polls_client"><div class="portfolio-logo"></div></a>
+          <span class="mdl-layout__title title">プロ野球 順位投票 2016</span>
+      </span>
+    </div>
+    <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+      <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+        <a [routerLink]="['Home']" class="mdl-navigation__link"
+           [class.is-active]="isActive('Home')">現在の投票結果</a>
+        <a [routerLink]="['Votes']" class="mdl-navigation__link"
+           [class.is-active]="isActive('Votes')"
+           [class.link-disabled]="!authentication.isCurrentUserAuthenticated">投票する</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<snack-bar></snack-bar>
+

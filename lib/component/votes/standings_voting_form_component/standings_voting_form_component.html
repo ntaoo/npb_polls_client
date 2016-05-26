@@ -1,0 +1,51 @@
+<div *ngIf="standings != null">
+  <form (submit)="onSubmit()" *ngIf="editMode" class="fade-in">
+    <standings-card elevation="4">
+      <league>{{standingsEditor.leagueName}}</league>
+
+      <standing *ngFor="let selector of standingsEditor.selectors">
+        <number>{{selector.number}}位</number>
+        <team class="select-container" [style.border-color]="selector.selectedTeam.color">
+          <select class="mdl-textfield__input"
+                  (change)="select(selector, $event)"
+                  [value]="selector.selectedTeam.id"
+                  [disabled]="isSubmitting">
+            <option *ngFor="let team of selector.selections"
+                    [label]="team.name"
+                    [value]="team.id">
+              {{team.name}}
+            </option>
+          </select>
+          <div class="clear-button-container">
+            <i class="material-icons clear-button" [hidden]="!selector.isFilled || isSubmitting"
+               (click)="standingsEditor.clear(selector)">clear</i>
+          </div>
+        </team>
+      </standing>
+      <note>
+        <span [hidden]="standingsEditor.isFilledAll">全ての位のチームを選択後、投票できます。</span>
+      </note>
+
+      <actions>
+        <button (click)="standingsEditor.clearAll()"
+                class="mdl-button mdl-button--raised"
+                [disabled]="!standingsEditor.isFilledAny || isSubmitting">
+          リセット
+        </button>
+        <button type="submit"
+                class="mdl-button mdl-button--raised mdl-button--accent"
+                [disabled]="!standingsEditor.isFilledAll || isSubmitting">
+          投票する
+        </button>
+      </actions>
+    </standings-card>
+  </form>
+
+  <standings-vote [standings]="standings" *ngIf="!editMode" class="fade-in">
+    <button
+        class="mdl-button mdl-button--raised"
+        (click)="startEdit()">
+      投票し直す
+    </button>
+  </standings-vote>
+</div>

@@ -1,0 +1,26 @@
+@import './../shared/animation';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.votes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.votes-header {
+  margin: 50px auto 0 auto;
+  padding: 10px;
+  border-left: 3px solid rgb(255, 64, 129);
+  max-width: 300px;
+  background-color: white;
+  font-size: 16px;
+  .note {
+    font-size: 12px;
+  }
+}

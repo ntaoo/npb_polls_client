@@ -1,0 +1,19 @@
+<div class="mdl-grid portfolio-max-width container" *ngIf="standingsVotes != null">
+  <div class="votes">
+    <standings-voting-form
+        [standings]="latestOrBlank(league)"
+        (userVotedStandings)="onUserVotedStandings($event)"
+        *ngFor="let league of leagues"></standings-voting-form>
+  </div>
+
+  <div class="history" *ngIf="standingsVotes.history.isNotEmpty">
+    <div class="votes-header mdl-shadow--6dp">
+      <div>{{currentUser.name}}の過去の投票</div>
+      <div class="note">各リーグの最後の投票のみ統計に反映されます</div>
+    </div>
+    <div class="votes">
+      <standings-vote [standings]="standings" *ngFor="let standings of standingsVotes.history"
+                      class="fade-in"></standings-vote>
+    </div>
+  </div>
+</div>
