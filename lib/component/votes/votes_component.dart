@@ -14,7 +14,7 @@ import 'standings_voting_form_component/standings_voting_form_component.dart';
 @Component(
     selector: 'votes',
     templateUrl: 'votes_component.html',
-    styleUrls: const ['votes_component.css'],
+    styleUrls: const ['votes_component.scss.css'],
     directives: const [StandingsVotingFormComponent, StandingsVoteComponent])
 @CanActivate(isAuthenticated)
 class VotesComponent implements OnInit {

@@ -8,7 +8,7 @@ import 'src/standing_votes_component.dart';
 @Component(
     selector: 'standings-polls',
     templateUrl: 'standings_polls_component.html',
-    styleUrls: const ['standings_polls_component.css'],
+    styleUrls: const ['standings_polls_component.scss.css'],
     directives: const [DoughnutChartComponent, StandingVotesComponent])
 class StandingsPollsComponent implements OnInit {
   StandingsPollsResource _standingsPollsResource;

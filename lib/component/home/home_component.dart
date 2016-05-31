@@ -7,7 +7,7 @@ import 'standings_polls_component/standings_polls_component.dart';
 @Component(
     selector: 'x-home',
     templateUrl: 'home_component.html',
-    styleUrls: const ['home_component.css'],
+    styleUrls: const ['home_component.scss.css'],
     directives: const [SignInComponent, StandingsPollsComponent])
 class HomeComponent {
   Authentication authentication;

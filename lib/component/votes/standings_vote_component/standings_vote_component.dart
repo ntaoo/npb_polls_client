@@ -6,7 +6,6 @@ import 'package:npb_polls/domain/model/standings.dart';
 @Component(
     selector: 'standings-vote',
     templateUrl: 'standings_vote_component.html',
-    styleUrls: const [],
     directives: const [standingsCardDirectives],
     pipes: const [DatePipe],
     changeDetection: ChangeDetectionStrategy.OnPush)

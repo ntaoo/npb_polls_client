@@ -15,7 +15,7 @@ class StandingComponent {}
 @Component(
     selector: 'standings-card',
     templateUrl: 'standings_card_component.html',
-    styleUrls: const ['standings_card_component.css'])
+    styleUrls: const ['standings_card_component.scss.css'])
 class StandingsCardComponent {
   Renderer _renderer;
   ElementRef _elementRef;

@@ -8,7 +8,7 @@ import 'package:angular2/core.dart';
 @Component(
     selector: 'snack-bar',
     template: '<div class="mdl-snackbar__text">{{message}}</div>',
-    styleUrls: const ['./snack_bar.css'])
+    styleUrls: const ['./snack_bar.scss.css'])
 class SnackBar {
   bool isActive = false;
   String message;

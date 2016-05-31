@@ -84,7 +84,7 @@ packages:
       name: collection
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.7.0"
+    version: "1.8.0"
   console_log_handler:
     description:
       name: console_log_handler
@@ -290,12 +290,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.22.0"
-  sass:
+  scissors:
     description:
-      name: sass
+      name: scissors
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.2"
+    version: "0.6.1+1"
   shelf:
     description:
       name: shelf

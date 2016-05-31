@@ -7,7 +7,7 @@ import 'package:npb_polls/domain/service/authentication.dart';
 @Component(
     selector: 'sign-in',
     templateUrl: 'sign_in_component.html',
-    styleUrls: const ['sign_in_component.css'],
+    styleUrls: const ['sign_in_component.scss.css'],
     directives: const [auth.GSignin])
 class SignInComponent {
   Authentication _authentication;

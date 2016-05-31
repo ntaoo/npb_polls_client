@@ -12,7 +12,7 @@ import 'package:npb_polls/resource/vote/standings_votes_resource.dart';
 @Component(
     selector: 'standings-voting-form',
     templateUrl: 'standings_voting_form_component.html',
-    styleUrls: const ['standings_voting_form_component.css'],
+    styleUrls: const ['standings_voting_form_component.scss.css'],
     directives: const [StandingsVoteComponent, StandingsCardComponent])
 class StandingsVotingFormComponent {
   Standings _standings;

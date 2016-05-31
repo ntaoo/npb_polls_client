@@ -18,7 +18,7 @@ import 'shared/snack_bar/snack_bar_event.dart';
     selector: 'npb-polls',
     templateUrl: 'app_component.html',
     styleUrls: const [
-      'app_component.css'
+      'app_component.scss.css'
     ],
     providers: const [
       ROUTER_PROVIDERS,
