@@ -14,7 +14,7 @@ You can also refer to [the document of Dart version](https://angular.io/docs/dar
 
 * Clean simple semantics.
 * Great optional type system, standard libraries, and tooling support.
-* You don't need to take care with JavaScript's basic flaws thanks to the JavaScript compilers(dart2js, dev compiler).
+* You don't need to take care with JavaScript's basic flaws and tooling fuss thanks to the JavaScript compilers(dart2js, dev compiler).
 
 ## Cons
 
