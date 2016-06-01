@@ -1,6 +1,6 @@
 name: npb_polls
 description: A polls service client for NPB standings.
-version: 1.0.0
+version: 1.0.1
 environment:
   sdk: '>=1.16.0 <2.0.0'
 dependencies:
