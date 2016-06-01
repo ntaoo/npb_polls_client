@@ -1,28 +1,27 @@
-This is a public repository of [https://npb-polls.appspot.com/](https://npb-polls.appspot.com/) client app. (The server side code repository is private.)
+This is a public repository of [https://npb-polls.appspot.com/](https://npb-polls.appspot.com/) client app.
 
-This small app is an example to learn how to build web app with Angular2 Dart.
+This small app is an example to learn how to build web app with Angular2 Dart version.
 
-# About Angular2 Dart version
+# Angular2 Dart version
 
-Angular2 is written in TypeScript, and transpiled into Dart. The API is essentially same to the TypeScript version. Thus developers can learn Angular2 in either language they prefer. Actually I have learned Angular2 with [angular.io TypeScript version document](https://angular.io/docs/ts/latest/quickstart.html) and have written actual code in Dart. Of course you can refer to [the document of Dart version](https://angular.io/docs/dart/latest/quickstart.html) thanks to recent excellent translation work.
+Angular2 is written in TypeScript, and transpiled into Dart. The API is essentially same to the TypeScript version. Thus developers can learn Angular2 in either language they prefer. Actually I have learned Angular2 with [angular.io TypeScript version document](https://angular.io/docs/ts/latest/quickstart.html) and have implemented apps in Dart.
+
+You can also refer to [the document of Dart version](https://angular.io/docs/dart/latest/quickstart.html) thanks to recent excellent translation work.
 
 # The pros and cons
 
 ## Pros
 
 * Clean simple semantics.
-* Great standard libraries and tooling support.
-* You don't need to bother about JavaScript's basic flaws thanks to the JavaScript compilers(dart2js, DDC).
-
-Personally I see "Dart for the web" as "ECMAScript fixed" with type system and stable standard libraries, without JavaScript's tooling fuss.
+* Great optional type system, standard libraries, and tooling support.
+* You don't need to take care with JavaScript's basic flaws thanks to the JavaScript compilers(dart2js, dev compiler).
 
 ## Cons
 
-* Angular2's primary ecosystem will grow with the TypeScript version.
-* No upgrade support from AngularJSv1.
 * The community and ecosystem is still much smaller than the ones of JavaScript.
-* Cross browser development cycle support is poor. (Hope DDC would ease it.)
-* Compiled JS payload size tends to be huge for small app, especially a bit hard to justify for mobile network. (Cache support like service worker is important.)
+* No upgrade support from AngularJSv1.
+* Poor cross browser development cycle support. (Dev compiler would ease it.)
+* Compiled JS payload size tends to be big for small app. Service worker integration will be important.
 * Requires IE > 11.
 
 
@@ -54,12 +53,12 @@ In that case it might be worth to try automatic code generation with something l
 ### No HTTP_PROVIDERS (yet).
 
 Unlike the TypeScript version, the Dart version does not (yet?) provide Rx(Stream) based HTTP_PROVIDERS.
-So I have implemented [future based transitive http client with middleware](https://github.com/ntaoo/http_lift) by myself, that will be replaced after a stream based http client is available.
+I have implemented [future based transitive http client with middleware](https://github.com/ntaoo/http_lift) by myself, that will be replaced after a stream based http client is available for the dart version.
 
-# UI
+# UI library
 
-The native Dart material UI library is expected to be available, which is a different work from [https://github.com/angular/material2](https://github.com/angular/material2). See also [https://github.com/angular/material2/issues/37](https://github.com/angular/material2/issues/37).
+The native Dart material UI library would be available, which is a different work from [https://github.com/angular/material2](https://github.com/angular/material2). See also [https://github.com/angular/material2/issues/37](https://github.com/angular/material2/issues/37).
 
-# appendix
+# Appendix
 
 I added public gist of [an example of Appengine's app.yaml handlers section for SPA](https://gist.github.com/ntaoo/5314f017cf30130cf2c3ed857f9ab02c).
