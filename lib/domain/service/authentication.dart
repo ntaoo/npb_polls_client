@@ -11,9 +11,6 @@ import './../model/user.dart';
 
 export './../model/user.dart';
 
-const authentication = const Provider(Authentication,
-    deps: const [GoogleUsersResource, CurrentUserResource]);
-
 @Injectable()
 class Authentication {
   User _currentUser;
@@ -23,8 +20,8 @@ class Authentication {
   final StreamController _checkStreamController = new StreamController();
   StreamSubscription _checkSubscription;
 
-  Authentication(
-      this._googleUsersResource, this._currentUserResource, this._logger) {
+  Authentication(this._googleUsersResource, this._currentUserResource,
+      this._logger) {
     _checkSubscription = _checkStreamController.stream
         .transform(new Debounce(const Duration(milliseconds: 500)))
         .listen((_) {});
@@ -43,7 +40,7 @@ class Authentication {
     google_auth.BasicProfile profile = googleUser.getBasicProfile();
 
     _currentUser = (await _googleUsersResource.post(authResponse.id_token,
-            profile.getEmail(), profile.getName(), profile.getId()))
+        profile.getEmail(), profile.getName(), profile.getId()))
         .body;
   }
 
